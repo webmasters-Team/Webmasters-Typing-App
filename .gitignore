@@ -1,0 +1,11 @@
+TODO.md
+
+node_modules
+client/node_modules
+server/node_modules
+server/.env
+client/.env
+
+client/build
+server/build
+server/client-build

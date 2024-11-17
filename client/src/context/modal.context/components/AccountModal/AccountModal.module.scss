@@ -1,0 +1,109 @@
+.modal {
+  width: 500px;
+}
+
+.topContainer {
+  display: flex;
+  margin-bottom: 24px;
+
+  &Buttons {
+    width: 100%;
+    white-space: nowrap;
+    font-size: 16px;
+    border-bottom: 3px solid var(--clr-char);
+    color: var(--clr-char-correct);
+    opacity: 0.5;
+    padding: 0.5em;
+    transition: opacity 150ms, border-color 150ms;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.8;
+    }
+
+    &.active {
+      opacity: 1;
+      border-color: var(--clr-main);
+    }
+  }
+}
+
+.dividerText {
+  text-align: center;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-top: 34px;
+  margin-bottom: 10px;
+
+  &::before,
+  &::after {
+    content: '';
+    height: 1px;
+    background-color: currentColor;
+    width: 100%;
+    opacity: 0.3;
+  }
+
+  &Content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.oauthWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.oauthLink {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  opacity: 0.85;
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  margin-top: 8px;
+  transition: opacity 175ms, border-color 175ms;
+
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+  }
+
+  &Icon {
+    flex-shrink: 0;
+    margin-right: 12px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.benefits {
+  position: relative;
+  font-size: 13px;
+  opacity: 0.9;
+
+  &Item {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+
+    &Icon {
+      margin-right: 8px;
+      width: 20px;
+      opacity: 0.75;
+    }
+  }
+}

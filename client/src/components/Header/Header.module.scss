@@ -1,0 +1,110 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  overflow: hidden;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+  }
+
+  &LogoButtonsWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &Buttons {
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-right: auto;
+    margin-left: 30px;
+    padding-left: 10px;
+
+    @media (max-width: 800px) {
+      margin-left: 15px;
+    }
+
+    @media (max-width: 650px) {
+      margin-left: 10px;
+      padding-left: 5px;
+    }
+
+    & > button:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 75%;
+      width: 2px;
+      background-color: var(--clr-char);
+      border-radius: 100vw;
+    }
+  }
+}
+
+.headerBtn {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  word-spacing: -3px;
+
+  @media (max-width: 1040px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (max-width: 650px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  & > svg {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+  }
+
+  & > span {
+    margin-left: 7px;
+  }
+}
+
+.oneVersusOneIcon {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.accountBtn {
+  margin-left: auto;
+  overflow: hidden;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+
+  &Icon {
+    flex-shrink: 0;
+  }
+
+  &Text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+  }
+}
+
+.loadingUserSpinner {
+  font-size: 9px;
+  margin-left: 7px;
+  margin-top: 5px;
+}

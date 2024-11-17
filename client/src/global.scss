@@ -1,0 +1,93 @@
+@use 'theme/default';
+@use 'theme/midnight';
+@use 'theme/retro';
+@use 'theme/superuser';
+@use 'theme/vscode';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --clr-raw: #817979;
+  --clr-logo-icon: #fc626a;
+
+  --font-family-default: 'Roboto Mono', monospace;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+svg,
+img {
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-default);
+  font-weight: var(--font-weight-regular);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+
+  &.theme--default {
+    @include default.theme;
+  }
+  &.theme--midnight {
+    @include midnight.theme;
+  }
+  &.theme--retro {
+    @include retro.theme;
+  }
+  &.theme--superuser {
+    @include superuser.theme;
+  }
+  &.theme--vscode {
+    @include vscode.theme;
+  }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1100px;
+  min-width: 280px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+
+  &-track {
+    background: var(--clr-modal);
+  }
+  &-thumb {
+    background: var(--clr-main);
+    border-radius: 100vw;
+  }
+}
+
+.opacity-transition {
+  transition: opacity 200ms;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.bold {
+  font-weight: bold;
+}

@@ -17,7 +17,7 @@ export default function Logo(props: Props) {
       <IconKeyboard className={styles.icon} />
       <div className={styles['text-div']}>
         <span className={styles['text-div__title']}>Webmasters Typing app</span>
-        <span className={styles['text-div__subtitle']}>Test your typing speed</span>
+        <span className={styles['text-div__subtitle']}>Test your typing speed </span>
       </div>
     </div>
   );
